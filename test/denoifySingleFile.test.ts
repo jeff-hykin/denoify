@@ -1,7 +1,7 @@
-import { describe, it, expect, assert } from "vitest";
-import { denoifySingleFileFactory } from "../src/lib/denoifySingleFile";
-import { ParsedImportExportStatement } from "../src/lib/types/ParsedImportExportStatement";
-import { assert as tsafeAssert } from "tsafe/assert";
+import { describe, it, expect, assert } from "https://esm.sh/vitest@0.34.1";
+import { denoifySingleFileFactory } from "../src/lib/denoifySingleFile.ts"
+import { ParsedImportExportStatement } from "../src/lib/types/ParsedImportExportStatement.ts"
+import { assert as tsafeAssert } from "https://esm.sh/tsafe@1.6.4/assert";
 
 describe("denoify single file", () => {
     it("should denoify source code of a file", async () => {

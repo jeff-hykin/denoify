@@ -1,5 +1,5 @@
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from "node:fs"
+import * as path from "node:path"
 
 /** List all files in a given directory return paths relative to the dir_path */
 export const crawl = (() => {

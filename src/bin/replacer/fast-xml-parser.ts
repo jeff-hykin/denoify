@@ -1,5 +1,5 @@
-import { is404 } from "../../lib";
-import type { Replacer } from "../../lib";
+import { is404 } from "../../lib.ts"
+import type { Replacer } from "../../lib.ts"
 
 const moduleName = "fast-xml-parser";
 

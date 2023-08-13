@@ -1,6 +1,6 @@
-import { get_caller_file_path } from "scripting-tools";
+import { get_caller_file_path } from "https://esm.sh/scripting-tools@0.19.14";
 import * as child_process from "child_process";
-import * as path from "path";
+import * as path from "node:path"
 import { Deferred } from "evt/tools/Deferred";
 
 export async function runSequentially(params: { scriptsPaths: string[] }) {

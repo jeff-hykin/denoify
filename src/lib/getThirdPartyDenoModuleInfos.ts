@@ -1,5 +1,4 @@
-import fetch from "node-fetch";
-import { addCache } from "../tools/addCache";
+import { addCache } from "../tools/addCache.ts"
 
 // https://api.deno.land/modules
 // https://cdn.deno.land/evt/meta/versions.json

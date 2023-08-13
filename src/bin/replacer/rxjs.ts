@@ -1,5 +1,5 @@
-import type { Replacer } from "../../lib";
-import { Version } from "../../tools/Version";
+import type { Replacer } from "../../lib.ts"
+import { Version } from "../../tools/Version.ts"
 
 const moduleName = "rxjs";
 

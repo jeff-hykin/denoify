@@ -1,7 +1,7 @@
-import { describe, it, expect } from "vitest";
-import getFileTypeAndContent from "../../src/lib/config/fileAndContent";
-import { parseAsDenoifyConfig } from "../../src/lib/config/parseParams";
-import { assert } from "tsafe/assert";
+import { describe, it, expect } from "https://esm.sh/vitest@0.34.1";
+import getFileTypeAndContent from "../../src/lib/config/fileAndContent.ts"
+import { parseAsDenoifyConfig } from "../../src/lib/config/parseParams.ts"
+import { assert } from "https://esm.sh/tsafe@1.6.4/assert";
 
 describe("parse denoify config params", () => {
     const configDummy = {

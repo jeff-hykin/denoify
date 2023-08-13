@@ -1,5 +1,5 @@
-import { Octokit } from "@octokit/rest";
-import { addCache } from "../tools/addCache";
+import { Octokit } from "https://esm.sh/@octokit/rest@20.0.1";
+import { addCache } from "../tools/addCache.ts"
 
 let octokit: Octokit | undefined = undefined;
 

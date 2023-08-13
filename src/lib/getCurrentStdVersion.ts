@@ -1,6 +1,6 @@
-import { Version } from "../tools/Version";
-import { listTags } from "../tools/githubTags";
-import { addCache } from "../tools/addCache";
+import { Version } from "../tools/Version.ts"
+import { listTags } from "../tools/githubTags.ts"
+import { addCache } from "../tools/addCache.ts"
 
 export const getCurrentStdVersion = addCache(async () => {
     const stdBranch: string[] = [];

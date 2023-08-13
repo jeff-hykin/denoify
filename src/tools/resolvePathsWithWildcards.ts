@@ -1,7 +1,7 @@
-import { globProxyFactory } from "./globProxy";
-import * as fs from "fs";
-import { crawl } from "./crawl";
-import * as path from "path";
+import { globProxyFactory } from "./globProxy.ts"
+import * as fs from "node:fs"
+import { crawl } from "./crawl.ts"
+import * as path from "node:path"
 
 export function resolvePathsWithWildcards(params: { pathWithWildcards: string[] }): string[] {
     const { pathWithWildcards } = params;

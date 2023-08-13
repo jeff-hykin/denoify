@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
-import * as path from "path";
-import { pathDepth } from "../tools/pathDepth";
-import { moveContentUpOneLevelFactory } from "../tools/moveContentUpOneLevel";
-import { getIsDryRun } from "./lib/getIsDryRun";
-import * as fs from "fs";
-import * as commentJson from "comment-json";
-import { resolvePathsWithWildcards } from "../tools/resolvePathsWithWildcards";
-import { assert } from "tsafe/assert";
-import { is } from "tsafe/is";
+import * as path from "node:path"
+import { pathDepth } from "../tools/pathDepth.ts"
+import { moveContentUpOneLevelFactory } from "../tools/moveContentUpOneLevel.ts"
+import { getIsDryRun } from "./lib/getIsDryRun.ts"
+import * as fs from "node:fs"
+import * as commentJson from "https://esm.sh/comment-json@4.2.3";
+import { resolvePathsWithWildcards } from "../tools/resolvePathsWithWildcards.ts"
+import { assert } from "https://esm.sh/tsafe@1.6.4/assert";
+import { is } from "https://esm.sh/tsafe@1.6.4/is";
 import { removeDuplicates } from "evt/tools/reducers/removeDuplicates";
 import { same } from "evt/tools/inDepth/same";
-import { isInsideOrIsDir } from "../tools/isInsideOrIsDir";
+import { isInsideOrIsDir } from "../tools/isInsideOrIsDir.ts"
 
 /**
  * To disable dry run mode  DRY_RUN=1 env variable must be set.

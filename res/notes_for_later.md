@@ -5,8 +5,8 @@ support for third party library by writing custom import and enable user to writ
 Example with `ipaddr.js`:
 
 ```typescript
-import { Version } from "../../tools/Version";
-import { ParsedImportExportStatement } from "../types/ParsedImportExportStatement";
+import { Version } from "../../tools/Version.ts"
+import { ParsedImportExportStatement } from "../types/ParsedImportExportStatement.ts"
 
 export async function importExportStatementReplacer(params: { importExportStatement: string; version: string }): Promise<undefined | string> {
     const { importExportStatement, version } = params;

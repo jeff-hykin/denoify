@@ -1,8 +1,8 @@
-import { describe, it, expect } from "vitest";
-import { getValidImportUrlFactory } from "../../../src/lib/resolveNodeModuleToDenoModule";
-import { ModuleAddress } from "../../../src/lib/types/ModuleAddress";
-import { getLatestTag } from "../../../src/tools/githubTags";
-import { assert } from "tsafe/assert";
+import { describe, it, expect } from "https://esm.sh/vitest@0.34.1";
+import { getValidImportUrlFactory } from "../../../src/lib/resolveNodeModuleToDenoModule.ts"
+import { ModuleAddress } from "../../../src/lib/types/ModuleAddress.ts"
+import { getLatestTag } from "../../../src/tools/githubTags.ts"
+import { assert } from "https://esm.sh/tsafe@1.6.4/assert";
 
 describe("test 3 (deno non std)", () => {
     it("should fallback to available latest version and get the valid url file path for js-yaml when the latest version specified is not available", async () => {

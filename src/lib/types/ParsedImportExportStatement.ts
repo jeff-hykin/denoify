@@ -1,4 +1,4 @@
-import { id } from "tsafe";
+import { id } from "https://esm.sh/tsafe@1.6.4";
 
 export type ParsedImportExportStatement = ParsedImportExportStatement.Regular | ParsedImportExportStatement.Async;
 

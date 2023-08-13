@@ -1,7 +1,7 @@
-import * as path from "path";
-import { execFactory } from "./exec";
-import * as st from "scripting-tools";
-import { crawl } from "./crawl";
+import * as path from "node:path"
+import { execFactory } from "./exec.ts"
+import * as st from "https://esm.sh/scripting-tools@0.19.14";
+import { crawl } from "./crawl.ts"
 
 export function moveContentUpOneLevelFactory(params: { isDryRun: boolean; log?: typeof console.log | undefined }) {
     const { isDryRun, log } = params;

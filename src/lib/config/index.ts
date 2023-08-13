@@ -1,5 +1,5 @@
-import { cosmiconfig } from "cosmiconfig";
-import { parseAsDenoifyParams } from "./parseParams";
+import { cosmiconfig } from "https://esm.sh/cosmiconfig@8.2.0";
+import { parseAsDenoifyParams } from "./parseParams.ts"
 
 const config = (() => {
     const packageJson = "package.json";

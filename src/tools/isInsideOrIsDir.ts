@@ -1,4 +1,4 @@
-import * as path from "path";
+import * as path from "node:path"
 
 export function isInsideOrIsDir(params: { dirPath: string; fileOrDirPath: string }) {
     const { dirPath, fileOrDirPath } = params;

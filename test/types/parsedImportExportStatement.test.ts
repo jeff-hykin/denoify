@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
-import { ParsedImportExportStatement } from "../../src/lib/types/ParsedImportExportStatement";
+import { describe, it, expect } from "https://esm.sh/vitest@0.34.1";
+import { ParsedImportExportStatement } from "../../src/lib/types/ParsedImportExportStatement.ts"
 
 describe("get the proper result of parsed import export statement", () => {
     it("should extract useful information from import statement", () => {

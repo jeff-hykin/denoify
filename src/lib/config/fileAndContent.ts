@@ -1,4 +1,4 @@
-import config from ".";
+import config from "./index.ts";
 
 export type ConfigFileType =
     | {

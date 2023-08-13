@@ -1,23 +1,22 @@
-import { ModuleAddress } from "../types/ModuleAddress";
-import { is404 } from "../../tools/is404";
-import { urlJoin } from "../../tools/urlJoin";
-import { getGithubDefaultBranchName } from "get-github-default-branch-name";
-import { getThirdPartyDenoModuleInfos } from "../getThirdPartyDenoModuleInfos";
-import fetch from "node-fetch";
-import * as commentJson from "comment-json";
-import * as path from "path";
-import { getCurrentStdVersion } from "../getCurrentStdVersion";
-import type { getInstalledVersionPackageJsonFactory } from "../getInstalledVersionPackageJson";
-import { addCache } from "../../tools/addCache";
-import { toPosix } from "../../tools/toPosix";
-import { id } from "tsafe";
-import { getLatestTag } from "../../tools/githubTags";
-import { isInsideOrIsDir } from "../../tools/isInsideOrIsDir";
-import { knownPorts } from "./knownPorts";
-import { assert } from "tsafe/assert";
-import { exclude } from "tsafe/exclude";
-import getFileTypeAndContent from "../config/fileAndContent";
-import { parseAsDenoifyConfig } from "../config/parseParams";
+import { ModuleAddress } from "../types/ModuleAddress.ts"
+import { is404 } from "../../tools/is404.ts"
+import urlJoin from "https://esm.sh/url-join@5.0.0"
+import { getGithubDefaultBranchName } from "https://esm.sh/get-github-default-branch-name@0.0.4";
+import { getThirdPartyDenoModuleInfos } from "../getThirdPartyDenoModuleInfos.ts"
+import * as commentJson from "https://esm.sh/comment-json@4.2.3";
+import * as path from "node:path"
+import { getCurrentStdVersion } from "../getCurrentStdVersion.ts"
+import type { getInstalledVersionPackageJsonFactory } from "../getInstalledVersionPackageJson.ts"
+import { addCache } from "../../tools/addCache.ts"
+import { toPosix } from "../../tools/toPosix.ts"
+import { id } from "https://esm.sh/tsafe@1.6.4";
+import { getLatestTag } from "../../tools/githubTags.ts"
+import { isInsideOrIsDir } from "../../tools/isInsideOrIsDir.ts"
+import { knownPorts } from "./knownPorts.ts"
+import { assert } from "https://esm.sh/tsafe@1.6.4/assert";
+import { exclude } from "https://esm.sh/tsafe@1.6.4/exclude";
+import getFileTypeAndContent from "../config/fileAndContent.ts"
+import { parseAsDenoifyConfig } from "../config/parseParams.ts"
 
 type GetValidImportUrl = (
     params:

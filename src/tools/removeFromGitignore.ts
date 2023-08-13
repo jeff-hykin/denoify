@@ -1,7 +1,7 @@
-import { isInsideOrIsDir } from "./isInsideOrIsDir";
-import * as fs from "fs";
-import { crawl } from "./crawl";
-import * as path from "path";
+import { isInsideOrIsDir } from "./isInsideOrIsDir.ts"
+import * as fs from "node:fs"
+import { crawl } from "./crawl.ts"
+import * as path from "node:path"
 const gitignoreParser: {
     compile: (raw: string) => {
         accepts: (fileOrDirPath: string) => boolean;

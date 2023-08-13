@@ -1,5 +1,5 @@
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from "node:fs"
+import * as path from "node:path"
 
 /** To support node < v10  we don't use fs.mkdir */
 export async function createDirectoryIfNotExistsRecursive(dirname: string) {

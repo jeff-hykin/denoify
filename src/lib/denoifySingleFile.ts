@@ -1,7 +1,7 @@
-import { replaceAsync } from "../tools/replaceAsync";
-import type { denoifyImportExportStatementFactory } from "./denoifyImportExportStatement";
-import * as crypto from "crypto";
-import builtins from "./builtins/index";
+import { replaceAsync } from "../tools/replaceAsync.ts";
+import type { denoifyImportExportStatementFactory } from "./denoifyImportExportStatement.ts";
+import * as crypto from "node:crypto";
+import builtins from "./builtins/index.ts";
 
 /**
  * Remove any lines containing and following // @denoify-line-ignore

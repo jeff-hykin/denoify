@@ -1,7 +1,7 @@
-import * as fs from "fs";
-import * as path from "path";
-import { crawl } from "./crawl";
-import { createDirectoryIfNotExistsRecursive } from "./createDirectoryIfNotExistsRecursive";
+import * as fs from "node:fs";
+import * as path from "node:path";
+import { crawl } from "./crawl.ts";
+import { createDirectoryIfNotExistsRecursive } from "./createDirectoryIfNotExistsRecursive.ts";
 
 /** Apply a transformation function to every file of directory */
 export async function transformCodebase(params: {

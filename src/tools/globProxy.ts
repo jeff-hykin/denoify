@@ -1,4 +1,4 @@
-import * as glob from "glob";
+import * as glob from "https://esm.sh/glob@10.3.3";
 
 export function globProxyFactory(params: { cwdAndRoot: string }) {
     const { cwdAndRoot } = params;

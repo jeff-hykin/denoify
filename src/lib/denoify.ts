@@ -1,18 +1,18 @@
-import { denoifySingleFileFactory } from "./denoifySingleFile";
-import { transformCodebase } from "../tools/transformCodebase";
-import { resolveNodeModuleToDenoModuleFactory } from "./resolveNodeModuleToDenoModule";
-import * as fs from "fs";
-import * as path from "path";
-import * as commentJson from "comment-json";
-import { denoifyImportExportStatementFactory } from "./denoifyImportExportStatement";
-import { isInsideOrIsDir } from "../tools/isInsideOrIsDir";
-import { getInstalledVersionPackageJsonFactory } from "./getInstalledVersionPackageJson";
-import { toPosix } from "../tools/toPosix";
-import { id } from "tsafe";
-import { resolvePathsWithWildcards } from "../tools/resolvePathsWithWildcards";
-import { arrPartition } from "evt/tools/reducers/partition";
-import { fsCopy } from "../tools/fsCopy";
-import { getDenoifyParamsWithCosmiconfig } from "./config/parseParams";
+import { denoifySingleFileFactory } from "./denoifySingleFile.ts";
+import { transformCodebase } from "../tools/transformCodebase.ts";
+import { resolveNodeModuleToDenoModuleFactory } from "./resolveNodeModuleToDenoModule/resolveNodeModuleToDenoModule.ts";
+import * as fs from "node:fs";
+import * as path from "node:path";
+import * as commentJson from "https://esm.sh/comment-json@4.2.3";
+import { denoifyImportExportStatementFactory } from "./denoifyImportExportStatement.ts";
+import { isInsideOrIsDir } from "../tools/isInsideOrIsDir.ts";
+import { getInstalledVersionPackageJsonFactory } from "./getInstalledVersionPackageJson.ts";
+import { toPosix } from "../tools/toPosix.ts";
+import { id } from "https://esm.sh/tsafe@1.6.4";
+import { resolvePathsWithWildcards } from "../tools/resolvePathsWithWildcards.ts";
+import { arrPartition } from "https://deno.land/x/evt@v2.4.22/tools/reducers/partition.ts";
+import { fsCopy } from "../tools/fsCopy.ts";
+import { getDenoifyParamsWithCosmiconfig } from "./config/parseParams.ts";
 
 export async function denoify(params: {
     projectPath: string;

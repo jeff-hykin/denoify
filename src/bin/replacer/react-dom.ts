@@ -1,5 +1,5 @@
-import type { Replacer } from "../../lib";
-import { ParsedImportExportStatement } from "../../lib/types/ParsedImportExportStatement";
+import type { Replacer } from "../../lib.ts"
+import { ParsedImportExportStatement } from "../../lib/types/ParsedImportExportStatement.ts"
 
 const moduleName = "react-dom";
 

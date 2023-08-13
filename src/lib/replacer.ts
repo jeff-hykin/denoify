@@ -1,8 +1,8 @@
-import { assert, is } from "tsafe";
-import * as st from "scripting-tools";
-import { addCache } from "../tools/addCache";
+import { assert, is } from "https://esm.sh/tsafe@1.6.4";
+import * as st from "https://esm.sh/scripting-tools@0.19.14";
+import { addCache } from "../tools/addCache.ts"
 
-import { ParsedImportExportStatement as ParsedImportExportStatementExhaustive } from "./types/ParsedImportExportStatement";
+import { ParsedImportExportStatement as ParsedImportExportStatementExhaustive } from "./types/ParsedImportExportStatement.ts"
 
 export type ParsedImportExportStatement<Type extends "DEPENDENCY" | "URL"> = Exclude<ParsedImportExportStatementExhaustive, "parsedArgument"> & {
     parsedArgument: Type extends "DEPENDENCY"

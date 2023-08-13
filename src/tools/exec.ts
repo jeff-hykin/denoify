@@ -1,4 +1,4 @@
-import * as st from "scripting-tools";
+import * as st from "https://esm.sh/scripting-tools@0.19.14";
 
 export function execFactory(params: { isDryRun: boolean }) {
     const { isDryRun } = params;

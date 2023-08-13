@@ -1,4 +1,4 @@
-import * as fs from "fs";
+import * as fs from "node:fs"
 
 /** Save results of anterior calls */
 export function addCache<T extends (...args: any[]) => Promise<any>>(f: T, params?: { filePathForPersistanceAcrossRun: string }): T {

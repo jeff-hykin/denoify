@@ -1,6 +1,6 @@
-import * as fs from "fs";
-import * as path from "path";
-import { crawl } from "./crawl";
+import * as fs from "node:fs"
+import * as path from "node:path"
+import { crawl } from "./crawl.ts"
 
 /** Copy file or directory. Works on windows.
  * Non exsisting directories are created recursively

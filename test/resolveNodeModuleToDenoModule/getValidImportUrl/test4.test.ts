@@ -1,7 +1,7 @@
-import { describe, it, expect } from "vitest";
-import { getValidImportUrlFactory } from "../../../src/lib/resolveNodeModuleToDenoModule";
-import { ModuleAddress } from "../../../src/lib/types/ModuleAddress";
-import { assert } from "tsafe/assert";
+import { describe, it, expect } from "https://esm.sh/vitest@0.34.1";
+import { getValidImportUrlFactory } from "../../../src/lib/resolveNodeModuleToDenoModule.ts"
+import { ModuleAddress } from "../../../src/lib/types/ModuleAddress.ts"
+import { assert } from "https://esm.sh/tsafe@1.6.4/assert";
 
 describe("test 4", () => {
     it("should get the valid for my_dummy_npm_and_deno_module from github repo", async () => {

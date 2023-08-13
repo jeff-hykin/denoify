@@ -1,7 +1,7 @@
-import * as fs from "fs";
-import { cosmiconfig } from "cosmiconfig";
-import config from ".";
-import { ConfigFileType } from "./fileAndContent";
+import * as fs from "node:fs"
+import { cosmiconfig } from "https://esm.sh/cosmiconfig@8.2.0";
+import config from "./index.ts";
+import { ConfigFileType } from "./fileAndContent.ts"
 
 const guardAsOptionalString = (string: unknown) => (typeof string === "string" ? string : undefined);
 

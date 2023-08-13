@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-import { join as pathJoin, normalize as pathNormalize, dirname as pathDirname, basename as pathBasename } from "path";
-import { getIsDryRun } from "./lib/getIsDryRun";
-import * as fs from "fs";
-import * as commentJson from "comment-json";
-import { removeFromGitignore } from "../tools/removeFromGitignore";
-import { toPosix } from "../tools/toPosix";
-import { parseAsDenoifyConfig } from "../lib/config/parseParams";
-import getFileTypeAndContent from "../lib/config/fileAndContent";
+import { join as pathJoin, normalize as pathNormalize, dirname as pathDirname, basename as pathBasename } from "node:path"
+import { getIsDryRun } from "./lib/getIsDryRun.ts"
+import * as fs from "node:fs"
+import * as commentJson from "https://esm.sh/comment-json@4.2.3";
+import { removeFromGitignore } from "../tools/removeFromGitignore.ts"
+import { toPosix } from "../tools/toPosix.ts"
+import { parseAsDenoifyConfig } from "../lib/config/parseParams.ts"
+import getFileTypeAndContent from "../lib/config/fileAndContent.ts"
 
 const { getDenoifyOutDir } = (() => {
     async function getExplicitDenoifyOutDir(params: { moduleDirPath: string }) {

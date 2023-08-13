@@ -1,11 +1,37 @@
 import { execSync } from "child_process";
-import { join as pathJoin, relative as pathRelative } from "path";
-import * as fs from "fs";
+import { join as pathJoin, relative as pathRelative } from "node:path"
+import * as fs from "node:fs"
 
 const singletonDependencies: string[] = [
     //"react",
     //"@types/react"
 ];
+
+const __dirname = (() => {
+    const { url: urlStr } = import.meta;
+    const url = new URL(urlStr);
+    const __filename = (url.protocol === "file:" ? url.pathname : urlStr)
+        .replace(/[/][^/]*$/, '');
+
+    const isWindows = (() => {
+
+        let NATIVE_OS: typeof Deno.build.os = "linux";
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const navigator = (globalThis as any).navigator;
+        if (globalThis.Deno != null) {
+            NATIVE_OS = Deno.build.os;
+        } else if (navigator?.appVersion?.includes?.("Win") ?? false) {
+            NATIVE_OS = "windows";
+        }
+
+        return NATIVE_OS == "windows";
+
+    })();
+
+    return isWindows ?
+        __filename.split("/").join("\\").substring(1) :
+        __filename;
+})();
 
 const rootDirPath = pathJoin(__dirname, "..");
 

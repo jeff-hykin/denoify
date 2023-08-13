@@ -1,11 +1,11 @@
-import * as path from "path";
-import { assert, is } from "tsafe";
-import * as fs from "fs";
-import type { resolveNodeModuleToDenoModuleFactory } from "./resolveNodeModuleToDenoModule";
-import type { getInstalledVersionPackageJsonFactory } from "./getInstalledVersionPackageJson";
-import { ParsedImportExportStatement } from "./types/ParsedImportExportStatement";
-import { consumeExecutableReplacerFactory } from "./replacer";
-import { getProjectRoot } from "../tools/getProjectRoot";
+import * as path from "node:path"
+import { assert, is } from "https://esm.sh/tsafe@1.6.4";
+import * as fs from "node:fs"
+import type { resolveNodeModuleToDenoModuleFactory } from "./resolveNodeModuleToDenoModule.ts"
+import type { getInstalledVersionPackageJsonFactory } from "./getInstalledVersionPackageJson.ts"
+import { ParsedImportExportStatement } from "./types/ParsedImportExportStatement.ts"
+import { consumeExecutableReplacerFactory } from "./replacer.ts"
+import { getProjectRoot } from "../tools/getProjectRoot.ts"
 
 /**
  * examples:

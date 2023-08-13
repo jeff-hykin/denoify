@@ -1,8 +1,33 @@
-import * as path from "path";
-import { describe, it, expect, assert } from "vitest";
-import { denoifyImportExportStatementFactory } from "../src/lib/denoifyImportExportStatement";
+import * as path from "node:path"
+import { describe, it, expect, assert } from "https://esm.sh/vitest@0.34.1";
+import { denoifyImportExportStatementFactory } from "../src/lib/denoifyImportExportStatement.ts"
 
 describe("denoify import export statement", () => {
+    const __dirname = (() => {
+    const { url: urlStr } = import.meta;
+    const url = new URL(urlStr);
+    const __filename = (url.protocol === "file:" ? url.pathname : urlStr)
+        .replace(/[/][^/]*$/, '');
+
+    const isWindows = (() => {
+
+        let NATIVE_OS: typeof Deno.build.os = "linux";
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const navigator = (globalThis as any).navigator;
+        if (globalThis.Deno != null) {
+            NATIVE_OS = Deno.build.os;
+        } else if (navigator?.appVersion?.includes?.("Win") ?? false) {
+            NATIVE_OS = "windows";
+        }
+
+        return NATIVE_OS == "windows";
+
+    })();
+
+    return isWindows ?
+        __filename.split("/").join("\\").substring(1) :
+        __filename;
+})();
     const userProvidedReplacerPath = path.join(__dirname, "..", "dist", "bin", "replacer", "index.js");
 
     it.each([`"`, `'`])("should denoify import statement with quotation of '%s'", async sep => {

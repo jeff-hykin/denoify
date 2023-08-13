@@ -1,8 +1,8 @@
-import * as st from "scripting-tools";
-import { addCache } from "../tools/addCache";
-import { join as pathJoin, basename as pathBasename, dirname as pathDirname } from "path";
-import * as fs from "fs";
-import { assert } from "tsafe";
+import * as st from "https://esm.sh/scripting-tools@0.19.14";
+import { addCache } from "../tools/addCache.ts"
+import { join as pathJoin, basename as pathBasename, dirname as pathDirname } from "node:path"
+import * as fs from "node:fs"
+import { assert } from "https://esm.sh/tsafe@1.6.4";
 
 export function getInstalledVersionPackageJsonFactory(params: { projectPath: string }) {
     const { projectPath } = params;

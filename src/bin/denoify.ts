@@ -1,13 +1,10 @@
 #!/usr/bin/env node
 
-import * as commanderStatic from "commander";
-import { denoify } from "../lib/denoify";
+import * as commanderStatic from "https://esm.sh/commander@11.0.0/";
+import { denoify } from "../lib/denoify.ts";
 
-process.once("unhandledRejection", error => {
-    throw error;
-});
-
-commanderStatic
+const command = (new commanderStatic.Command())
+command
     .description(
         `
     For NPM module authors that would like to support Deno but do not want to write and maintain a port.
@@ -25,9 +22,9 @@ commanderStatic
     .option("-o --out [outputDirPath]", `Default: '$(dirname <tsconfig.outDir>)/deno_lib' -- Path to the output directory`)
     .option("-i --index [indexFilePath]", `Default: 'Read from package.json' -- Path to the index.ts file typically: "src/lib/index.ts"`);
 
-commanderStatic.parse(process.argv);
+command.parse(Deno.args)
 
-const options = commanderStatic.opts();
+const options = command.opts();
 
 denoify({
     "projectPath": options.project,

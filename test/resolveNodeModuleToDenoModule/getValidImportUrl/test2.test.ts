@@ -1,8 +1,8 @@
-import { describe, it, expect } from "vitest";
-import { getThirdPartyDenoModuleInfos } from "../../../src/lib/getThirdPartyDenoModuleInfos";
-import { getValidImportUrlFactory } from "../../../src/lib/resolveNodeModuleToDenoModule";
-import { ModuleAddress } from "../../../src/lib/types/ModuleAddress";
-import { assert } from "tsafe/assert";
+import { describe, it, expect } from "https://esm.sh/vitest@0.34.1";
+import { getThirdPartyDenoModuleInfos } from "../../../src/lib/getThirdPartyDenoModuleInfos.ts"
+import { getValidImportUrlFactory } from "../../../src/lib/resolveNodeModuleToDenoModule.ts"
+import { ModuleAddress } from "../../../src/lib/types/ModuleAddress.ts"
+import { assert } from "https://esm.sh/tsafe@1.6.4/assert";
 
 describe("test 2", () => {
     it("should fallback to available latest version and get the valid url file path for evt when the latest version specified is not available", async () => {
